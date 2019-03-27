@@ -19,9 +19,7 @@ allprojects {
 ## Step 2. Add the dependency
 
 ```
-dependencies {
-	implementation 'com.github.stavro96:Rocket:1.0'
-	}
+implementation 'com.github.stavro96:Rocket:1.0'
 ```
 
 # Usage
@@ -29,22 +27,19 @@ dependencies {
 Just call the rocket instance like : 
 
 ```
-    private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME)
+private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME)
     
 ```
 
 ## Saving a value : 
 
 ```
-
 rocket.writeString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
-
 ```
 ## Reading a value : 
 
 ```
 rocket.readString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
-
 ```
 
 
