@@ -14,7 +14,6 @@ allprojects {
 		maven { url 'https://jitpack.io' }
 	}
 }
-
 ```
 ## Step 2. Add the dependency
 
@@ -28,7 +27,6 @@ Just call the rocket instance like :
 
 ```
 private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME)
-    
 ```
 
 ## Saving a value : 
