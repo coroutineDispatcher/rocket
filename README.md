@@ -1,5 +1,5 @@
 # Rocket
-A SharedPreferences library for Android
+A SharedPreferences library for Android , to speed up development
 
 # Download 
 
