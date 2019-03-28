@@ -7,7 +7,7 @@ A SharedPreferences library for Android , to speed up development
 
 Add it in your root build.gradle at the end of repositories:
 
-```
+```Groovy
 allprojects {
 	repositories {
 		...
@@ -17,7 +17,7 @@ allprojects {
 ```
 ## Step 2. Add the dependency
 
-```
+```Groovy
 implementation 'com.github.stavro96:Rocket:1.0'
 ```
 
