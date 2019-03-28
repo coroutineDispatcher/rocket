@@ -37,7 +37,7 @@ rocket.writeString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
 ## Reading a value : 
 
 ```
-rocket.readString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
+- rocket.readString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
 ```
 
 ## Deleting all saved SharedPreferences : 
