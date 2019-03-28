@@ -25,29 +25,29 @@ implementation 'com.github.stavro96:Rocket:1.0'
 
 Just call the rocket instance like : 
 
-```
+```Kotlin
 private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME)
 ```
 
 ## Saving a value : 
 
-```
+```Kotlin
 rocket.writeString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
 ```
 ## Reading a value : 
 
-```
+```Kotlin
 rocket.readString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
 ```
 
 ## Deleting all saved SharedPreferences : 
 
-```
+```Kotlin
 rocket.crash()
 ```
 ## Deleting one particular value :
 
-```
+```Kotlin
 rocket.drop(YOUR_DESIRED_KEY)
 ```
 
