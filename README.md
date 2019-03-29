@@ -3,7 +3,7 @@ A SharedPreferences library for Android , to speed up development
 
 # Download 
 
-## Step 1. Add the JitPack repository to your build file
+### Step 1. Add the JitPack repository to your build file
 
 Add it in your root build.gradle at the end of repositories:
 
@@ -15,13 +15,13 @@ allprojects {
 	}
 }
 ```
-## Step 2. Add the dependency
+### Step 2. Add the dependency
 
 ```Groovy
 implementation 'com.github.stavro96:Rocket:1.0'
 ```
 
-# Usage
+## Usage
 
 Just call the rocket instance like : 
 
@@ -29,23 +29,23 @@ Just call the rocket instance like :
 private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME)
 ```
 
-## Saving a value : 
+### Saving a value : 
 
 ```Kotlin
 rocket.writeString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
 ```
-## Reading a value : 
+### Reading a value : 
 
 ```Kotlin
 rocket.readString(YOUR_DESIRED_KEY_NAME , YOUR_DESIRED_VALUE)
 ```
 
-## Deleting all saved SharedPreferences : 
+### Deleting all saved SharedPreferences : 
 
 ```Kotlin
 rocket.crash()
 ```
-## Deleting one particular value :
+### Deleting one particular value :
 
 ```Kotlin
 rocket.drop(YOUR_DESIRED_KEY)
