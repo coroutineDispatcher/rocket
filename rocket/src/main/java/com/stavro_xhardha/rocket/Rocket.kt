@@ -10,8 +10,8 @@ class Rocket {
     private lateinit var sharedPreferencesEditor: SharedPreferences.Editor
 
     companion object {
-        fun launch(context: Context, fileName: String): Rocket = Rocket().apply {
-            sharedPreferences = context.getSharedPreferences(fileName, Context.MODE_PRIVATE)
+        fun launch(context: Context, fileName: String, mode: Int = Context.MODE_PRIVATE): Rocket = Rocket().apply {
+            sharedPreferences = context.getSharedPreferences(fileName, mode)
             sharedPreferencesEditor = sharedPreferences.edit()
         }
     }
