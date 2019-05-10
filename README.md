@@ -18,7 +18,7 @@ allprojects {
 ### Step 2. Add the dependency
 
 ```Groovy
-implementation 'com.github.stavro96:Rocket:1.0'
+implementation 'com.github.stavro96:Rocket:1.1.1'
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ implementation 'com.github.stavro96:Rocket:1.0'
 Just call the rocket instance like : 
 
 ```Kotlin
-private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME)
+private val rocket = Rocket.launch(mContext, SHARED_PREFERENCES_FILE_NAME , Context.MODE_PRIVATE)
 ```
 
 ### Saving a value : 
@@ -50,8 +50,6 @@ rocket.crash()
 ```Kotlin
 rocket.drop(YOUR_DESIRED_KEY)
 ```
-
-> Note : the current version has only the default private mode for SharedPrefs .
 
 ## Licence
 
