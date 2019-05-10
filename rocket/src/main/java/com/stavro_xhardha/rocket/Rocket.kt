@@ -46,9 +46,11 @@ class Rocket {
         sharedPreferencesEditor.putLong(key, value).apply()
     }
 
-    fun type(key: String, value: MutableSet<String>) {
+    fun writeSet(key: String, value: MutableSet<String>) {
         sharedPreferencesEditor.putStringSet(key, value).apply()
     }
+
+    fun readSet(key: String) = sharedPreferences.getStringSet(key, mutableSetOf())
 
     fun crash() {
         sharedPreferencesEditor.clear().apply()
