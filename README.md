@@ -51,6 +51,10 @@ rocket.crash()
 rocket.drop(YOUR_DESIRED_KEY)
 ```
 
+
+Note : The Mode is by default private , if you want to specify different mode , apply it as a third parameter in the `launch()` method
+
+
 ## Licence
 
 ```
