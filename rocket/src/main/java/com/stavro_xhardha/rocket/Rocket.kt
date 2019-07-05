@@ -2,7 +2,8 @@ package com.stavro_xhardha.rocket
 
 import android.content.Context
 import android.content.SharedPreferences
-
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class Rocket {
 
@@ -16,47 +17,65 @@ class Rocket {
         }
     }
 
-    fun readString(key: String, value: String = ""): String? = sharedPreferences.getString(key, value)
+    suspend fun readString(key: String): String? = withContext(Dispatchers.IO) { sharedPreferences.getString(key, "") }
 
-    fun writeString(key: String, value: String) {
-        sharedPreferencesEditor.putString(key, value).apply()
+    suspend fun writeString(key: String, value: String) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.putString(key, value).apply()
+        }
     }
 
-    fun readInt(key: String, value: Int = 0): Int = sharedPreferences.getInt(key, value)
+    suspend fun readInt(key: String): Int = withContext(Dispatchers.IO) { sharedPreferences.getInt(key, 0) }
 
-    fun writeInt(key: String, value: Int) {
-        sharedPreferencesEditor.putInt(key, value).apply()
+    suspend fun writeInt(key: String, value: Int) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.putInt(key, value).apply()
+        }
     }
 
-    fun readBoolean(key: String, value: Boolean = false): Boolean = sharedPreferences.getBoolean(key, value)
+    suspend fun readBoolean(key: String): Boolean =
+        withContext(Dispatchers.IO) { sharedPreferences.getBoolean(key, false) }
 
-    fun writeBoolean(key: String, value: Boolean) {
-        sharedPreferencesEditor.putBoolean(key, value).apply()
+    suspend fun writeBoolean(key: String, value: Boolean) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.putBoolean(key, value).apply()
+        }
     }
 
-    fun readFloat(key: String, value: Float = 0f) = sharedPreferences.getFloat(key, value)
+    suspend fun readFloat(key: String) = withContext(Dispatchers.IO) { sharedPreferences.getFloat(key, 0f) }
 
-    fun writeFloat(key: String, value: Float) {
-        sharedPreferencesEditor.putFloat(key, value).apply()
+    suspend fun writeFloat(key: String, value: Float) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.putFloat(key, value).apply()
+        }
     }
 
-    fun readLong(key: String, value: Long = 0L) = sharedPreferences.getLong(key, value)
+    suspend fun readLong(key: String) = withContext(Dispatchers.IO) { sharedPreferences.getLong(key, 0L) }
 
-    fun writeLong(key: String, value: Long) {
-        sharedPreferencesEditor.putLong(key, value).apply()
+    suspend fun writeLong(key: String, value: Long) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.putLong(key, value).apply()
+        }
     }
 
-    fun writeSet(key: String, value: MutableSet<String>) {
-        sharedPreferencesEditor.putStringSet(key, value).apply()
+    suspend fun writeSet(key: String, value: MutableSet<String>) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.putStringSet(key, value).apply()
+        }
     }
 
-    fun readSet(key: String) = sharedPreferences.getStringSet(key, mutableSetOf())
+    suspend fun readSet(key: String) =
+        withContext(Dispatchers.IO) { sharedPreferences.getStringSet(key, mutableSetOf()) }
 
-    fun crash() {
-        sharedPreferencesEditor.clear().apply()
+    suspend fun crash() {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.clear().apply()
+        }
     }
 
-    fun drop(key: String) {
-        sharedPreferencesEditor.remove(key).apply()
+    suspend fun drop(key: String) {
+        withContext(Dispatchers.IO) {
+            sharedPreferencesEditor.remove(key).apply()
+        }
     }
 }
