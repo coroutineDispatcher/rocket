@@ -7,6 +7,8 @@ import com.stavro_xhardha.rocket.Rocket
 
 class MainActivity : AppCompatActivity() {
 
+    val job: Job = Job()
+
     private val rocket by lazy {
         Rocket.launch(this, SHARED_PREFERENCES_FILE_NAME)
     }
