@@ -23,7 +23,9 @@ implementation 'com.github.stavro96:Rocket:1.1.2'
 
 ## Usage
 
-### Note: Rocket now works only with coroutine support therefore you must include suspend implementation and run it inside a CoroutineScope
+
+### Note:New version of Rocket now works only with coroutine support therefore you must include suspend implementation and run it inside a CoroutineScope
+
 
 Just call the rocket instance like : 
 
