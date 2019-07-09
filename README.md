@@ -24,8 +24,15 @@ implementation 'com.github.stavro96:Rocket:1.1.2'
 ## Usage
 
 
-### Note: New version of Rocket now works only with coroutine support therefore you must include suspend implementation and run it inside a CoroutineScope
+### Note: New version of Rocket now works only with coroutine support therefore you must include suspend implementation and run it inside a CoroutineScope. Example: 
 
+```Kotlin
+suspend fun writeData(data: String){
+ rocketInstance.writeString(DATA_KEY, data)
+}
+```
+
+When launching the method inside a coroutine there is no need to specify the `Dispatchers.IO` dispatcher. It's handled by the library.
 
 Just call the rocket instance like : 
 
