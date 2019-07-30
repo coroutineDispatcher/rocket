@@ -5,18 +5,21 @@ import android.content.SharedPreferences
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+/**
+ * This is the main and only true class of this small project
+ */
 class Rocket private constructor() {
 
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var sharedPreferencesEditor: SharedPreferences.Editor
 
     companion object {
+
         /**
          * Method for starting the Rocket's instance.
          * @param context context of the Singleton you are instantiating it
          * @param fileName file name of the SharedPreferences you wish to provide
          * @param mode, the way you want to access it.
-         * @see Context for other modes
          */
         fun launch(context: Context, fileName: String, mode: Int = Context.MODE_PRIVATE): Rocket = Rocket().apply {
             sharedPreferences = context.getSharedPreferences(fileName, mode)
