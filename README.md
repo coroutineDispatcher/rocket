@@ -1,6 +1,8 @@
 # Rocket :rocket: :rocket: :rocket:
 A SharedPreferences library for Android , to speed up development
 
+## KotlinDoc: https://stavro96.github.io/rocket_docs/
+
 # Download 
 
 ### Step 1. Add the JitPack repository to your build file
