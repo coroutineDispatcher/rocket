@@ -3,7 +3,7 @@ package com.stavro_xhardha.rocketdemo
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import com.stavro_xhardha.rocket.Rocket
+import com.stavro_xhardha.rocket.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -47,6 +47,12 @@ class MainActivity : AppCompatActivity() {
             Log.d("ROCKET", rocket.readFloat(FLOAT_KEY).toString())
             Log.d("ROCKET", rocket.readInt(INT_KEY).toString())
             Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
+
+            Log.d("ROCKET", STRING_KEY.isDefaultString(rocket).toString())
+            Log.d("ROCKET", BOOLEAN_KEY.isDefaultBoolean(rocket).toString())
+            Log.d("ROCKET", FLOAT_KEY.isDefaultFloat(rocket).toString())
+            Log.d("ROCKET", INT_KEY.isDefaultInt(rocket).toString())
+            Log.d("ROCKET", LONG_KEY.isDefaultLong(rocket).toString())
         }
     }
 
