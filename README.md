@@ -18,7 +18,7 @@ allprojects {
 ### Step 2. Add the dependency
 
 ```Groovy
-implementation 'com.github.stavro96:Rocket:1.1.2'
+implementation 'com.github.stavro96:Rocket:1.3.0'
 ```
 
 ## Usage
@@ -63,8 +63,13 @@ rocket.drop(YOUR_DESIRED_KEY)
 ```
 
 
-Note : The Mode is by default private , if you want to specify different mode , apply it as a third parameter in the `launch()` method
+Note : The Mode is by default `Context.MODE_PRIVATE` , if you want to specify different mode , apply it as a third parameter in the `launch()` method
 
+## Extension functions: 
+
+```Kotlin
+SOME_INT_KEY.isDefaultInt(rocketInstance)
+```
 
 ## Licence
 
