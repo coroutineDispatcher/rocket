@@ -20,7 +20,7 @@ allprojects {
 ### Step 2. Add the dependency
 
 ```Groovy
-implementation 'com.github.stavro96:Rocket:1.3.0'
+implementation 'com.github.stavro96:Rocket:1.3.1'
 ```
 
 ## Usage
