@@ -18,7 +18,7 @@ suspend fun String.isDefaultInt(rocket: Rocket): Boolean = rocket.readInt(this) 
  * Extension function for Rocket
  * @param rocket: Your Rocket Instance
  * @return true if the read Float exists, false if not
- */
+k */
 suspend fun String.isDefaultFloat(rocket: Rocket): Boolean = rocket.readFloat(this) == 0f
 
 /**
