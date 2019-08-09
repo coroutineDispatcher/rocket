@@ -27,13 +27,6 @@ class ExtensionTest {
 
     }
 
-    @Test(expected = KotlinNullPointerException::class)
-    fun `isDefaultString extension should throw error`() {
-        runBlocking {
-            TEST_STRING_KEY.isDefaultString(null)
-        }
-    }
-
     @Test
     fun `isDefaultString extension should return true when value is empty`() {
         runBlocking {
@@ -53,13 +46,6 @@ class ExtensionTest {
             val isDefault = TEST_STRING_KEY.isDefaultString(mockedRocket)
 
             assertEquals(false, isDefault)
-        }
-    }
-
-    @Test(expected = KotlinNullPointerException::class)
-    fun `isDefaultInt extensions should throw NPE when rocket is null`() {
-        runBlocking {
-            TEST_STRING_KEY.isDefaultInt(null)
         }
     }
 
@@ -85,13 +71,6 @@ class ExtensionTest {
         }
     }
 
-    @Test(expected = KotlinNullPointerException::class)
-    fun `isDefaultFloat extension should throw NPE`() {
-        runBlocking {
-            TEST_STRING_KEY.isDefaultFloat(null)
-        }
-    }
-
     @Test
     fun `isDefaultFloat should return true when value is zero`() {
         runBlocking {
@@ -114,13 +93,6 @@ class ExtensionTest {
         }
     }
 
-    @Test(expected = KotlinNullPointerException::class)
-    fun `isDefaultBoolean should throw NPE when rocket is null`() {
-        runBlocking {
-            TEST_STRING_KEY.isDefaultBoolean(mockedRocket)
-        }
-    }
-
     @Test
     fun `isDefaultBoolean should return false when value doesn not exist`() {
         runBlocking {
@@ -140,13 +112,6 @@ class ExtensionTest {
             val isDefault = TEST_STRING_KEY.isDefaultBoolean(mockedRocket)
 
             assertEquals(true, isDefault)
-        }
-    }
-
-    @Test(expected = KotlinNullPointerException::class)
-    fun `isDefaultLong should throw NPE when rocket is null`() {
-        runBlocking {
-            TEST_STRING_KEY.isDefaultLong(null)
         }
     }
 
