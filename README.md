@@ -1,7 +1,7 @@
 # Rocket :rocket: :rocket: :rocket:
 A SharedPreferences library for Android , to speed up development
 
-## KotlinDoc: https://stavro96.github.io/rocket_docs/
+## KotlinDoc: https://coroutinedispatcher.github.io/rocket_docs/
 
 # Download 
 
