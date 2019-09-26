@@ -1,4 +1,4 @@
-# Rocket :rocket: :rocket: :rocket:
+# Rocket :rocket: :rocket: :rocket:        <a href="https://www.buymeacoffee.com/pnRYZ5qBy" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 A SharedPreferences library for Android , to speed up development
 
 ## KotlinDoc: https://coroutinedispatcher.github.io/rocket_docs/
