@@ -3,7 +3,6 @@ package com.stavro_xhardha.rocket
 import android.content.Context
 import android.content.SharedPreferences
 import com.nhaarman.mockitokotlin2.mock
-import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -27,7 +26,12 @@ class RocketTest {
         sharedPreferences = mock()
         sharedPreferencesEditor = mock()
         val context = mock<Context>()
-        `when`(context.getSharedPreferences(ArgumentMatchers.anyString(), ArgumentMatchers.anyInt())).thenReturn(
+        `when`(
+            context.getSharedPreferences(
+                ArgumentMatchers.anyString(),
+                ArgumentMatchers.anyInt()
+            )
+        ).thenReturn(
             sharedPreferences
         )
         `when`(sharedPreferences.edit()).thenReturn(sharedPreferencesEditor)
@@ -42,262 +46,243 @@ class RocketTest {
 
     @Test
     fun `when SharedPreferences return 0 so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getInt(DEFAULT_TEST_KEY, 0)).thenReturn(0)
+        `when`(sharedPreferences.getInt(DEFAULT_TEST_KEY, 0)).thenReturn(0)
 
-            val valueReturned = rocket.readInt(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readInt(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, 0)
-        }
+        assertEquals(valueReturned, 0)
     }
 
     @Test
     fun `when SharedPreferences return a positive integer value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getInt(DEFAULT_TEST_KEY, 0)).thenReturn(4000)
+        `when`(sharedPreferences.getInt(DEFAULT_TEST_KEY, 0)).thenReturn(4000)
 
-            val valueReturned = rocket.readInt(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readInt(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, 4000)
-        }
+        assertEquals(valueReturned, 4000)
     }
 
     @Test
     fun `when SharedPreferences return a negative integer value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getInt(DEFAULT_TEST_KEY, 0)).thenReturn(-1231)
+        `when`(sharedPreferences.getInt(DEFAULT_TEST_KEY, 0)).thenReturn(-1231)
 
-            val valueReturned = rocket.readInt(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readInt(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, -1231)
-        }
+        assertEquals(valueReturned, -1231)
     }
 
     @Test
     fun `when SharedPreferences return 0f so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getFloat(DEFAULT_TEST_KEY, 0f)).thenReturn(0f)
+        `when`(sharedPreferences.getFloat(DEFAULT_TEST_KEY, 0f)).thenReturn(0f)
 
-            val valueReturned = rocket.readFloat(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readFloat(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, 0f)
-        }
+        assertEquals(valueReturned, 0f)
     }
 
     @Test
     fun `when SharedPreferences return a positive float value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getFloat(DEFAULT_TEST_KEY, 0f)).thenReturn(4000f)
+        `when`(sharedPreferences.getFloat(DEFAULT_TEST_KEY, 0f)).thenReturn(4000f)
 
-            val valueReturned = rocket.readFloat(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readFloat(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, 4000f)
-        }
+        assertEquals(valueReturned, 4000f)
     }
 
     @Test
     fun `when SharedPreferences return a negative float value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getFloat(DEFAULT_TEST_KEY, 0f)).thenReturn(-1231f)
+        `when`(sharedPreferences.getFloat(DEFAULT_TEST_KEY, 0f)).thenReturn(-1231f)
 
-            val valueReturned = rocket.readFloat(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readFloat(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, -1231f)
-        }
+        assertEquals(valueReturned, -1231f)
     }
 
     @Test
     fun `when SharedPreferences return 0L so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getLong(DEFAULT_TEST_KEY, 0L)).thenReturn(0L)
+        `when`(sharedPreferences.getLong(DEFAULT_TEST_KEY, 0L)).thenReturn(0L)
 
-            val valueReturned = rocket.readLong(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readLong(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, 0L)
-        }
+        assertEquals(valueReturned, 0L)
     }
 
     @Test
     fun `when SharedPreferences return a positive long value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getLong(DEFAULT_TEST_KEY, 0L)).thenReturn(4000L)
+        `when`(sharedPreferences.getLong(DEFAULT_TEST_KEY, 0L)).thenReturn(4000L)
 
-            val valueReturned = rocket.readLong(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readLong(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, 4000L)
-        }
+        assertEquals(valueReturned, 4000L)
     }
 
     @Test
     fun `when SharedPreferences return a negative long value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getLong(DEFAULT_TEST_KEY, 0L)).thenReturn(-1231L)
+        `when`(sharedPreferences.getLong(DEFAULT_TEST_KEY, 0L)).thenReturn(-1231L)
 
-            val valueReturned = rocket.readLong(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readLong(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, -1231L)
-        }
+        assertEquals(valueReturned, -1231L)
     }
 
     @Test
     fun `when SharedPreferences return true long value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getBoolean(DEFAULT_TEST_KEY, false)).thenReturn(false)
+        `when`(sharedPreferences.getBoolean(DEFAULT_TEST_KEY, false)).thenReturn(false)
 
-            val valueReturned = rocket.readBoolean(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readBoolean(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, false)
-        }
+        assertEquals(valueReturned, false)
     }
 
     @Test
     fun `when SharedPreferences return true value so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getBoolean(DEFAULT_TEST_KEY, false)).thenReturn(true)
+        `when`(sharedPreferences.getBoolean(DEFAULT_TEST_KEY, false)).thenReturn(true)
 
-            val valueReturned = rocket.readBoolean(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readBoolean(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, true)
-        }
+        assertEquals(valueReturned, true)
     }
 
     @Test
     fun `when SharedPreferences return emptySet so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getStringSet(DEFAULT_TEST_KEY, mutableSetOf())).thenReturn(mutableSetOf())
+        `when`(sharedPreferences.getStringSet(DEFAULT_TEST_KEY, mutableSetOf())).thenReturn(
+            mutableSetOf()
+        )
 
-            val valueReturned = rocket.readSet(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readSet(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, mutableSetOf<String>())
-        }
+        assertEquals(valueReturned, mutableSetOf<String>())
     }
 
     @Test
     fun `when SharedPreferences return filled set so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getStringSet(DEFAULT_TEST_KEY, mutableSetOf())).thenReturn(
-                mutableSetOf(
-                    "Beni",
-                    "Moza"
-                )
+        `when`(sharedPreferences.getStringSet(DEFAULT_TEST_KEY, mutableSetOf())).thenReturn(
+            mutableSetOf(
+                "Beni",
+                "Moza"
             )
+        )
 
-            val valueReturned = rocket.readSet(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readSet(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, mutableSetOf("Beni", "Moza"))
-        }
+        assertEquals(valueReturned, mutableSetOf("Beni", "Moza"))
     }
 
     @Test
     fun `when SharedPreferences return empty String, so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getString(DEFAULT_TEST_KEY, "")).thenReturn("")
+        `when`(sharedPreferences.getString(DEFAULT_TEST_KEY, "")).thenReturn("")
 
-            val valueReturned = rocket.readString(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readString(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, "")
-        }
+        assertEquals(valueReturned, "")
     }
 
     @Test
     fun `when SharedPreferences returns a non empty String, so does rocket`() {
-        runBlocking {
-            `when`(sharedPreferences.getString(DEFAULT_TEST_KEY, "")).thenReturn("BENI")
+        `when`(sharedPreferences.getString(DEFAULT_TEST_KEY, "")).thenReturn("BENI")
 
-            val valueReturned = rocket.readString(DEFAULT_TEST_KEY)
+        val valueReturned = rocket.readString(DEFAULT_TEST_KEY)
 
-            assertEquals(valueReturned, "BENI")
-        }
+        assertEquals(valueReturned, "BENI")
     }
 
     @Test(expected = ClassCastException::class)
     fun `when value exists in the SharedPreferences, but it is not a String`() {
-        runBlocking {
-            `when`(sharedPreferences.getString(DEFAULT_TEST_KEY, "")).thenThrow(ClassCastException::class.java)
+        `when`(
+            sharedPreferences.getString(
+                DEFAULT_TEST_KEY,
+                ""
+            )
+        ).thenThrow(ClassCastException::class.java)
 
-            rocket.readString(DEFAULT_TEST_KEY)
-        }
+        rocket.readString(DEFAULT_TEST_KEY)
     }
 
     @Test(expected = ClassCastException::class)
     fun `when key is not a StringSet readSet method should throw ClassCastException`() {
-        runBlocking {
-            `when`(
-                sharedPreferences.getStringSet(
-                    DEFAULT_TEST_KEY,
-                    mutableSetOf()
-                )
-            ).thenThrow(ClassCastException::class.java)
+        `when`(
+            sharedPreferences.getStringSet(
+                DEFAULT_TEST_KEY,
+                mutableSetOf()
+            )
+        ).thenThrow(ClassCastException::class.java)
 
-            rocket.readSet(DEFAULT_TEST_KEY)
-        }
+        rocket.readSet(DEFAULT_TEST_KEY)
     }
 
     @Test
     fun `when writing String, rocket SharedPrefsEditor should execute`() {
-        runBlocking {
-            `when`(sharedPreferencesEditor.putString(DEFAULT_TEST_KEY, "Beni")).thenReturn(sharedPreferencesEditor)
+        `when`(sharedPreferencesEditor.putString(DEFAULT_TEST_KEY, "Beni")).thenReturn(
+            sharedPreferencesEditor
+        )
 
-            rocket.writeString(DEFAULT_TEST_KEY, "Beni")
+        rocket.writeString(DEFAULT_TEST_KEY, "Beni")
 
-            verify(sharedPreferencesEditor.putString(DEFAULT_TEST_KEY, "Beni")).apply()
-        }
+        verify(sharedPreferencesEditor.putString(DEFAULT_TEST_KEY, "Beni")).apply()
     }
 
     @Test
     fun `when writing Int, rocket SharedPrefsEditor should execute`() {
-        runBlocking {
-            `when`(sharedPreferencesEditor.putInt(DEFAULT_TEST_KEY, 1)).thenReturn(sharedPreferencesEditor)
+        `when`(sharedPreferencesEditor.putInt(DEFAULT_TEST_KEY, 1)).thenReturn(
+            sharedPreferencesEditor
+        )
 
-            rocket.writeInt(DEFAULT_TEST_KEY, 1)
+        rocket.writeInt(DEFAULT_TEST_KEY, 1)
 
-            verify(sharedPreferencesEditor.putInt(DEFAULT_TEST_KEY, 1)).apply()
-        }
+        verify(sharedPreferencesEditor.putInt(DEFAULT_TEST_KEY, 1)).apply()
     }
 
     @Test
     fun `when writing Float, rocket SharedPrefsEditor should execute`() {
-        runBlocking {
-            `when`(sharedPreferencesEditor.putFloat(DEFAULT_TEST_KEY, 1f)).thenReturn(sharedPreferencesEditor)
+        `when`(sharedPreferencesEditor.putFloat(DEFAULT_TEST_KEY, 1f)).thenReturn(
+            sharedPreferencesEditor
+        )
 
-            rocket.writeFloat(DEFAULT_TEST_KEY, 1f)
+        rocket.writeFloat(DEFAULT_TEST_KEY, 1f)
 
-            verify(sharedPreferencesEditor.putFloat(DEFAULT_TEST_KEY, 1f)).apply()
-        }
+        verify(sharedPreferencesEditor.putFloat(DEFAULT_TEST_KEY, 1f)).apply()
     }
 
     @Test
     fun `when writing Long, rocket SharedPrefsEditor should execute`() {
-        runBlocking {
-            `when`(sharedPreferencesEditor.putLong(DEFAULT_TEST_KEY, 1L)).thenReturn(sharedPreferencesEditor)
+        `when`(sharedPreferencesEditor.putLong(DEFAULT_TEST_KEY, 1L)).thenReturn(
+            sharedPreferencesEditor
+        )
 
-            rocket.writeLong(DEFAULT_TEST_KEY, 1L)
+        rocket.writeLong(DEFAULT_TEST_KEY, 1L)
 
-            verify(sharedPreferencesEditor.putLong(DEFAULT_TEST_KEY, 1L)).apply()
-        }
+        verify(sharedPreferencesEditor.putLong(DEFAULT_TEST_KEY, 1L)).apply()
     }
 
     @Test
     fun `when writing Boolean, rocket SharedPrefsEditor should execute`() {
-        runBlocking {
-            `when`(sharedPreferencesEditor.putBoolean(DEFAULT_TEST_KEY, true)).thenReturn(sharedPreferencesEditor)
+        `when`(sharedPreferencesEditor.putBoolean(DEFAULT_TEST_KEY, true)).thenReturn(
+            sharedPreferencesEditor
+        )
 
-            rocket.writeBoolean(DEFAULT_TEST_KEY, true)
+        rocket.writeBoolean(DEFAULT_TEST_KEY, true)
 
-            verify(sharedPreferencesEditor.putBoolean(DEFAULT_TEST_KEY, true)).apply()
-        }
+        verify(sharedPreferencesEditor.putBoolean(DEFAULT_TEST_KEY, true)).apply()
     }
 
     @Test
     fun `when writing StringSet, rocket SharedPrefsEditor should execute`() {
-        runBlocking {
-            `when`(sharedPreferencesEditor.putStringSet(DEFAULT_TEST_KEY, mutableSetOf("Beni", "Moza"))).thenReturn(
-                sharedPreferencesEditor
+        `when`(
+            sharedPreferencesEditor.putStringSet(
+                DEFAULT_TEST_KEY,
+                mutableSetOf("Beni", "Moza")
             )
+        ).thenReturn(
+            sharedPreferencesEditor
+        )
 
-            rocket.writeSet(DEFAULT_TEST_KEY, mutableSetOf("Beni", "Moza"))
+        rocket.writeSet(DEFAULT_TEST_KEY, mutableSetOf("Beni", "Moza"))
 
-            verify(sharedPreferencesEditor.putStringSet(DEFAULT_TEST_KEY, mutableSetOf("Beni", "Moza"))).apply()
-        }
+        verify(
+            sharedPreferencesEditor.putStringSet(
+                DEFAULT_TEST_KEY,
+                mutableSetOf("Beni", "Moza")
+            )
+        ).apply()
     }
 }
