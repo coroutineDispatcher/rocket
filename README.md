@@ -27,7 +27,7 @@ allprojects {
 implementation 'com.github.coroutineDispatcher:Rocket:2.0.0-alpha'
 ```
 
-### Or if you are using KOTLIN DSL:
+### Or if you are using Kotlin DSL:
 
 ```Groovy
 allprojects {
