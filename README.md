@@ -3,7 +3,7 @@
 # Rocket :rocket: :rocket: :rocket:
 A SharedPreferences library for Android , to speed up development
 
-## KotlinDoc: https://coroutinedispatcher.github.io/rocket_docs/
+## KotlinDoc: https://coroutinedispatcher.github.io/rocket/
 
 # Download 
 
@@ -27,16 +27,23 @@ implementation 'com.github.stavro96:Rocket:1.3.1'
 
 ## Usage
 
-
-### Note: New version of Rocket now works only with coroutine support therefore you must include suspend implementation and run it inside a CoroutineScope. Example: 
-
 ```Kotlin
-suspend fun writeData(data: String){
+fun writeData(data: String){
  rocketInstance.writeString(DATA_KEY, data)
 }
 ```
 
-When launching the method inside a coroutine there is no need to specify the `Dispatchers.IO` dispatcher. It's handled by the library.
+### Support for Flows
+
+```Kotlin
+suspend fun readInt(key: String){
+ rocketInstance.readIntAsFlow(key, defaultDesiredValue).collect{
+   //handle here :)
+ }
+}
+```
+
+## Set up
 
 Just call the rocket instance like : 
 
@@ -66,6 +73,11 @@ rocket.crash()
 rocket.drop(YOUR_DESIRED_KEY)
 ```
 
+### Deleting desired values
+
+```Kotlin
+rocket.drop(YOUR_DESIRED_KEY_ONE, YOUR_DESIRED_KEY_TWO, YOUR_DESIRED_KEY_THREE)
+```
 
 Note : The Mode is by default `Context.MODE_PRIVATE` , if you want to specify different mode , apply it as a third parameter in the `launch()` method
 
@@ -74,6 +86,8 @@ Note : The Mode is by default `Context.MODE_PRIVATE` , if you want to specify di
 ```Kotlin
 SOME_INT_KEY.isDefaultInt(rocketInstance)
 ```
+
+### Please read the docs for more information about all methods
 
 ## Licence
 
