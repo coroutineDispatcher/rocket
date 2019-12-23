@@ -185,10 +185,10 @@ class Rocket private constructor() {
      * Reads a Set<String> from SharedPreferences as Flow<String>
      * @return Flow<String>
      * @see readSet
-     * @throws IllegalStateException when a value with the corresponding key is found but is not of type Set<String>
+     * @throws java.lang.ClassCastException when a value with the corresponding key is found but is not of type Set<String>
      */
     @ExperimentalCoroutinesApi
-    @Throws(IllegalStateException::class)
+    @Throws(java.lang.ClassCastException::class)
     fun readSetAsFlow(key: String): Flow<String> = readSet(key).asFlow()
         .catch {
             error("The key exists, but its' value is not of type StringSet")

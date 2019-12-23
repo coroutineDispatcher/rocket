@@ -1,13 +1,11 @@
 package com.stavro_xhardha.rocketdemo
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.stavro_xhardha.rocket.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.collect
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,41 +16,61 @@ class MainActivity : AppCompatActivity() {
         Rocket.launch(this, SHARED_PREFERENCES_FILE_NAME)
     }
 
+    @ExperimentalCoroutinesApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        coroutineScope.launch {
-            rocket.writeBooleanSuspended(BOOLEAN_KEY, true)
-            rocket.writeStringSuspended(STRING_KEY, "Rocket is awesome")
+
+        coroutineScope.launch(Dispatchers.IO) {
+            rocket.writeBoolean(BOOLEAN_KEY, true)
+            rocket.writeString(STRING_KEY, "Rocket is awesome")
             rocket.writeFloat(FLOAT_KEY, 1.0f)
-            rocket.writeIntSuspended(INT_KEY, 10)
+            rocket.writeInt(INT_KEY, 10)
             rocket.writeLong(LONG_KEY, 20000010L)
 
-            Log.d("ROCKET", rocket.readStringSuspended(STRING_KEY))
-            Log.d("ROCKET", rocket.readBooleanSuspended(BOOLEAN_KEY).toString())
-            Log.d("ROCKET", rocket.readFloatSuspended(FLOAT_KEY).toString())
-            Log.d("ROCKET", rocket.readIntSuspended(INT_KEY).toString())
-            Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
+            rocket.readStringAsFlow(STRING_KEY).collect {
+                Log.d("ROCKET", "$it from Flow")
+            }
+            rocket.readBooleanAsFlow(BOOLEAN_KEY).collect {
+                Log.d("ROCKET", "$it from Flow")
+            }
+            rocket.readLongAsFlow(LONG_KEY).collect {
+                Log.d("ROCKET", "$it from Flow")
+            }
+            rocket.readFloatAsFLow(FLOAT_KEY).collect {
+                Log.d("ROCKET", "$it from Flow")
+            }
+            rocket.readIntAsFlow(INT_KEY).collect {
+                Log.d("ROCKET", "$it from Flow")
+            }
 
-            rocket.drop(LONG_KEY)
-            Log.d("ROCKET", rocket.readStringSuspended(STRING_KEY))
-            Log.d("ROCKET", rocket.readBooleanSuspended(BOOLEAN_KEY).toString())
-            Log.d("ROCKET", rocket.readFloatSuspended(FLOAT_KEY).toString())
-            Log.d("ROCKET", rocket.readIntSuspended(INT_KEY).toString())
-            Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
+            withContext(Dispatchers.Main) {
+                Log.d("ROCKET", rocket.readString(STRING_KEY))
+                Log.d("ROCKET", rocket.readBoolean(BOOLEAN_KEY).toString())
+                Log.d("ROCKET", rocket.readFloat(FLOAT_KEY).toString())
+                Log.d("ROCKET", rocket.readInt(INT_KEY).toString())
+                Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
 
-            rocket.crashSuspended()
-            Log.d("ROCKET", rocket.readStringSuspended(STRING_KEY))
-            Log.d("ROCKET", rocket.readBooleanSuspended(BOOLEAN_KEY).toString())
-            Log.d("ROCKET", rocket.readFloatSuspended(FLOAT_KEY).toString())
-            Log.d("ROCKET", rocket.readIntSuspended(INT_KEY).toString())
-            Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
+                rocket.drop(LONG_KEY)
+                Log.d("ROCKET", rocket.readString(STRING_KEY))
+                Log.d("ROCKET", rocket.readBoolean(BOOLEAN_KEY).toString())
+                Log.d("ROCKET", rocket.readFloatAsFLow(FLOAT_KEY).toString())
+                Log.d("ROCKET", rocket.readInt(INT_KEY).toString())
+                Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
 
-            Log.d("ROCKET", STRING_KEY.isDefaultString(rocket).toString())
-            Log.d("ROCKET", BOOLEAN_KEY.isDefaultBoolean(rocket).toString())
-            Log.d("ROCKET", FLOAT_KEY.isDefaultFloat(rocket).toString())
-            Log.d("ROCKET", INT_KEY.isDefaultInt(rocket).toString())
-            Log.d("ROCKET", LONG_KEY.isDefaultLong(rocket).toString())
+                rocket.crash()
+                Log.d("ROCKET", rocket.readString(STRING_KEY))
+                Log.d("ROCKET", rocket.readBoolean(BOOLEAN_KEY).toString())
+                Log.d("ROCKET", rocket.readFloat(FLOAT_KEY).toString())
+                Log.d("ROCKET", rocket.readInt(INT_KEY).toString())
+                Log.d("ROCKET", rocket.readLong(LONG_KEY).toString())
+
+                Log.d("ROCKET", STRING_KEY.isDefaultString(rocket).toString())
+                Log.d("ROCKET", BOOLEAN_KEY.isDefaultBoolean(rocket).toString())
+                Log.d("ROCKET", FLOAT_KEY.isDefaultFloat(rocket).toString())
+                Log.d("ROCKET", INT_KEY.isDefaultInt(rocket).toString())
+                Log.d("ROCKET", LONG_KEY.isDefaultLong(rocket).toString())
+            }
         }
     }
 
