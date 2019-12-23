@@ -1,0 +1,502 @@
+<HTML>
+<HEAD>
+    <meta charset="UTF-8">
+    <title>Rocket - rocket</title>
+    <link href="style.css" rel="stylesheet">
+</HEAD>
+<BODY>
+<a href="../../index.html">rocket</a>&nbsp;/&nbsp;<a
+        href="../index.html">com.stavro_xhardha.rocket</a>&nbsp;/&nbsp;<a
+        href="./index.html">Rocket</a><br/>
+<br/>
+<h1>Rocket</h1>
+<code><span class="keyword">class </span><span class="identifier">Rocket</span></code>
+<p>This is the main and only true class of this small project</p>
+<h3>Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="crash.html">crash</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">crash</span><span
+                    class="symbol">(</span><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Clears all values saved to Shared Preferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="drop.html">drop</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">drop</span><span
+                    class="symbol">(</span><span class="keyword">vararg</span> <span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$drop(kotlin.Array((kotlin.String)))/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Removes a number of saved values found by a key</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-boolean.html">readBoolean</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readBoolean</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readBoolean(kotlin.String, kotlin.Boolean)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readBoolean(kotlin.String, kotlin.Boolean)/defaultBooleanValue">defaultBooleanValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a></code>
+            <p>Reads an Boolean from SharedPreferences. If no value is found the method returns
+                false by default</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-boolean-as-flow.html">readBooleanAsFlow</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readBooleanAsFlow</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readBooleanAsFlow(kotlin.String, kotlin.Boolean)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readBooleanAsFlow(kotlin.String, kotlin.Boolean)/defaultBooleanValue">defaultBooleanValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a>&nbsp;<span class="symbol">=</span>&nbsp;false<span
+                    class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span
+                    class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a><span class="symbol">&gt;</span></code>
+            <p>Flow support for getting a Boolean from SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-float.html">readFloat</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readFloat</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readFloat(kotlin.String, kotlin.Float)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readFloat(kotlin.String, kotlin.Float)/defaultFloatValue">defaultFloatValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span
+                    class="identifier">Float</span></a>&nbsp;<span
+                    class="symbol">=</span>&nbsp;0f<span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span
+                    class="identifier">Float</span></a></code>
+            <p>Reads an Float from SharedPreferences. If no value is found the method returns 0f by
+                default</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-float-as-f-low.html">readFloatAsFLow</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span
+                    class="identifier">readFloatAsFLow</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readFloatAsFLow(kotlin.String, kotlin.Float)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readFloatAsFLow(kotlin.String, kotlin.Float)/defaultFloatValue">defaultFloatValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span
+                    class="identifier">Float</span></a>&nbsp;<span
+                    class="symbol">=</span>&nbsp;0f<span class="symbol">)</span><span
+                    class="symbol">: </span><span class="identifier">Flow</span><span
+                    class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span
+                    class="identifier">Float</span></a><span class="symbol">&gt;</span></code>
+            <p>Flow support for getting a Float from SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-int.html">readInt</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readInt</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readInt(kotlin.String, kotlin.Int)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readInt(kotlin.String, kotlin.Int)/defaultIntValue">defaultIntValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+                    class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+                    class="identifier">Int</span></a></code>
+            <p>Reads an Int from SharedPreferences. If no value is found the method returns 0 by
+                default</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-int-as-flow.html">readIntAsFlow</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span
+                    class="identifier">readIntAsFlow</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readIntAsFlow(kotlin.String, kotlin.Int)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readIntAsFlow(kotlin.String, kotlin.Int)/defaultIntValue">defaultIntValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+                    class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span
+                    class="symbol">)</span><span class="symbol">: </span><span class="identifier">Flow</span><span
+                    class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+                    class="identifier">Int</span></a><span class="symbol">&gt;</span></code>
+            <p>Flow support for getting and Int from SharedPreferences. If no value is found the
+                method emits 0 by default</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-long.html">readLong</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readLong</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readLong(kotlin.String, kotlin.Long)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readLong(kotlin.String, kotlin.Long)/defaultLongValue">defaultLongValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+                    class="identifier">Long</span></a>&nbsp;<span
+                    class="symbol">=</span>&nbsp;0L<span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+                    class="identifier">Long</span></a></code>
+            <p>Reads an Long from SharedPreferences. If no value is found the method returns 0L by
+                default</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-long-as-flow.html">readLongAsFlow</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span
+                    class="identifier">readLongAsFlow</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readLongAsFlow(kotlin.String, kotlin.Long)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readLongAsFlow(kotlin.String, kotlin.Long)/defaultLongValue">defaultLongValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+                    class="identifier">Long</span></a>&nbsp;<span
+                    class="symbol">=</span>&nbsp;0L<span class="symbol">)</span><span
+                    class="symbol">: </span><span class="identifier">Flow</span><span
+                    class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+                    class="identifier">Long</span></a><span class="symbol">&gt;</span></code>
+            <p>Flow support for getting a Log value from SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-set.html">readSet</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readSet</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readSet(kotlin.String, kotlin.collections.MutableSet((kotlin.String)))/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readSet(kotlin.String, kotlin.collections.MutableSet((kotlin.String)))/defaultSetValue">defaultSetValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html"><span
+                    class="identifier">MutableSet</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span>&nbsp;<span
+                    class="symbol">=</span>&nbsp;mutableSetOf()<span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html"><span
+                    class="identifier">MutableSet</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+            <p>Reads an Long from SharedPreferences. If no value is found the method returns 0L by
+                default</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-set-as-flow.html">readSetAsFlow</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span
+                    class="identifier">readSetAsFlow</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readSetAsFlow(kotlin.String)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><span class="identifier">Flow</span><span
+                    class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+            <p>Flow support for getting a stream Flow</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-string.html">readString</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">readString</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$readString(kotlin.String, kotlin.String)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readString(kotlin.String, kotlin.String)/defaultStringValue">defaultStringValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a>&nbsp;<span
+                    class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a></code>
+            <p>Reads a String from SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="read-string-as-flow.html">readStringAsFlow</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span
+                    class="identifier">readStringAsFlow</span><span class="symbol">(</span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readStringAsFlow(kotlin.String, kotlin.String)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$readStringAsFlow(kotlin.String, kotlin.String)/defaultStringValue">defaultStringValue</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a>&nbsp;<span
+                    class="symbol">=</span>&nbsp;""<span class="symbol">)</span><span
+                    class="symbol">: </span><span class="identifier">Flow</span><span
+                    class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+            <p>Flow support for getting a String value from SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="write-boolean.html">writeBoolean</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">writeBoolean</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$writeBoolean(kotlin.String, kotlin.Boolean)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$writeBoolean(kotlin.String, kotlin.Boolean)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span
+                    class="identifier">Boolean</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Writes a Boolean to SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="write-float.html">writeFloat</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">writeFloat</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$writeFloat(kotlin.String, kotlin.Float)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$writeFloat(kotlin.String, kotlin.Float)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span
+                    class="identifier">Float</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Writes a Float to SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="write-int.html">writeInt</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">writeInt</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$writeInt(kotlin.String, kotlin.Int)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$writeInt(kotlin.String, kotlin.Int)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+                    class="identifier">Int</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Writes a Int to SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="write-long.html">writeLong</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">writeLong</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$writeLong(kotlin.String, kotlin.Long)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$writeLong(kotlin.String, kotlin.Long)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span
+                    class="identifier">Long</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Writes a Long value to SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="write-set.html">writeSet</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">writeSet</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$writeSet(kotlin.String, kotlin.collections.MutableSet((kotlin.String)))/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$writeSet(kotlin.String, kotlin.collections.MutableSet((kotlin.String)))/value">value</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html"><span
+                    class="identifier">MutableSet</span></a><span class="symbol">&lt;</span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">&gt;</span><span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Writes a MutableSet to SharedPreferences</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p><a href="write-string.html">writeString</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">writeString</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket$writeString(kotlin.String, kotlin.String)/key">key</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket$writeString(kotlin.String, kotlin.String)/value">value</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">)</span><span
+                    class="symbol">: </span><a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span
+                    class="identifier">Unit</span></a></code>
+            <p>Writes a String to SharedPreferences</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<h3>Companion Object Functions</h3>
+<table>
+    <tbody>
+    <tr>
+        <td>
+            <p><a href="launch.html">launch</a></p>
+        </td>
+        <td>
+            <code><span class="keyword">fun </span><span class="identifier">launch</span><span
+                    class="symbol">(</span><span class="identifier"
+                                                 id="com.stavro_xhardha.rocket.Rocket.Companion$launch(android.content.Context, kotlin.String, kotlin.Int)/context">context</span><span
+                    class="symbol">:</span>&nbsp;<span class="identifier">Context</span><span
+                    class="symbol">, </span><span class="identifier"
+                                                  id="com.stavro_xhardha.rocket.Rocket.Companion$launch(android.content.Context, kotlin.String, kotlin.Int)/fileName">fileName</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span
+                    class="identifier">String</span></a><span class="symbol">, </span><span
+                    class="identifier"
+                    id="com.stavro_xhardha.rocket.Rocket.Companion$launch(android.content.Context, kotlin.String, kotlin.Int)/mode">mode</span><span
+                    class="symbol">:</span>&nbsp;<a
+                    href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span
+                    class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;Context.MODE_PRIVATE<span
+                    class="symbol">)</span><span class="symbol">: </span><a
+                    href="./index.html"><span class="identifier">Rocket</span></a></code>
+            <p>Method for starting the Rocket's instance.</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</BODY>
+</HTML>
