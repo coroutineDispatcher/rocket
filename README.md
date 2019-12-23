@@ -1,7 +1,9 @@
 <a href="https://www.buymeacoffee.com/pnRYZ5qBy" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 # Rocket :rocket: :rocket: :rocket:
-A SharedPreferences library for Android , to speed up development
+A SharedPreferences library for Android , to speed up development.
+Since I always have to write this class in every project now anyone can use it.
+Added some extra functionality, wrote tests and it's good to go for anyone.
 
 ## KotlinDoc: https://coroutinedispatcher.github.io/rocket/
 
@@ -23,6 +25,21 @@ allprojects {
 
 ```Groovy
 implementation 'com.github.stavro96:Rocket:1.3.1'
+```
+
+Or if you are using KOTLIN DSL:
+
+```Groovy
+allprojects {
+	repositories {
+		...
+		maven("https://jitpack.io")
+	}
+}
+```
+
+```Kotlin
+implementation("com.github.stavro96:Rocket:1.3.1")
 ```
 
 ## Usage
