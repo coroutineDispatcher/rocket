@@ -24,10 +24,10 @@ allprojects {
 ### Step 2. Add the dependency
 
 ```Groovy
-implementation 'com.github.stavro96:Rocket:1.3.1'
+implementation 'com.github.coroutineDispatcher:Rocket:2.0.0-alpha'
 ```
 
-Or if you are using KOTLIN DSL:
+### Or if you are using KOTLIN DSL:
 
 ```Groovy
 allprojects {
@@ -39,7 +39,7 @@ allprojects {
 ```
 
 ```Kotlin
-implementation("com.github.stavro96:Rocket:1.3.1")
+implementation("com.github.coroutineDispatcher:Rocket:2.0.0-alpha")
 ```
 
 ## Usage
