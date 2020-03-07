@@ -27,21 +27,6 @@ allprojects {
 implementation 'com.stavro_xhardha.rocket:rocket:2.2.3'
 ```
 
-### Or if you are using Kotlin DSL:
-
-```Groovy
-allprojects {
-	repositories {
-		...
-		maven("https://jitpack.io")
-	}
-}
-```
-
-```Kotlin
-implementation("com.github.coroutineDispatcher:Rocket:2.0.0-alpha")
-```
-
 ## Usage
 
 ```Kotlin
