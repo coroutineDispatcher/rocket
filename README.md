@@ -18,7 +18,6 @@ allprojects {
 	repositories {
 		...
 		jcenter()
-		//maven { url 'https://jitpack.io' } you can pull for this one too
 	}
 }
 ```
@@ -26,7 +25,6 @@ allprojects {
 
 ```Groovy
 implementation 'com.stavro_xhardha.rocket:rocket:2.2.3'
-//implementation 'com.github.coroutineDispatcher:Rocket:2.0.0-alpha' you can use this one too
 ```
 
 ### Or if you are using Kotlin DSL:
