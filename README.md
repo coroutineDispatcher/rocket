@@ -9,7 +9,7 @@ Added some extra functionality, wrote tests and it's good to go for anyone.
 
 # Download 
 
-### Step 1. Add the JitPack repository to your build file
+### Step 1. Add the `jcenter()` repository to your build file
 
 Add it in your root build.gradle at the end of repositories:
 
