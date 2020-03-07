@@ -17,14 +17,16 @@ Add it in your root build.gradle at the end of repositories:
 allprojects {
 	repositories {
 		...
-		maven { url 'https://jitpack.io' }
+		jcenter()
+		//maven { url 'https://jitpack.io' } you can pull for this one too
 	}
 }
 ```
 ### Step 2. Add the dependency
 
 ```Groovy
-implementation 'com.github.coroutineDispatcher:Rocket:2.0.0-alpha'
+implementation 'com.stavro_xhardha.rocket:rocket:2.2.3'
+//implementation 'com.github.coroutineDispatcher:Rocket:2.0.0-alpha' you can use this one too
 ```
 
 ### Or if you are using Kotlin DSL:
