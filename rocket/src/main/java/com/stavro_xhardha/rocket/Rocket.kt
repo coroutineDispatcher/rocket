@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.flow
 /**
  * This is the main and only true class of this small project
  */
+@OptIn(ExperimentalCoroutinesApi::class)
 class Rocket private constructor() {
 
     private lateinit var sharedPreferences: SharedPreferences

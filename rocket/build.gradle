@@ -2,6 +2,33 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'org.jetbrains.dokka'
+apply plugin: 'com.github.dcendents.android-maven'
+
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    bintrayRepo = 'Rocket'
+    bintrayName = 'com.coroutinedispatcher.rocket'
+
+    publishedGroupId = 'com.stavro_xhardha.rocket'
+    libraryName = 'rocket'
+    artifact = 'rocket'
+
+    libraryDescription = 'Easy SharedPreferences for Android'
+
+    siteUrl = 'https://coroutinedispatcher.github.io/rocket'
+    gitUrl = 'https://github.com/coroutineDispatcher/rocket'
+
+    libraryVersion = '2.2.3'
+
+    developerId = 'coroutinedispatcher'
+    developerName = 'Stavro Xhardha'
+    developerEmail = 'stavro96@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 29
@@ -43,4 +70,9 @@ dependencies {
 }
 repositories {
     mavenCentral()
+}
+
+if (project.rootProject.file('local.properties').exists()) {
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+    apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
 }
