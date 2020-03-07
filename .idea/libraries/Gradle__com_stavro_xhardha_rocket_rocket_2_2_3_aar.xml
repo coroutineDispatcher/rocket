@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.stavro_xhardha.rocket:rocket:2.2.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9995910aec1c9f785e9a99a167b3eb55/jetified-rocket-2.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9995910aec1c9f785e9a99a167b3eb55/jetified-rocket-2.2.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.stavro_xhardha.rocket/rocket/2.2.3/ff15d13a20a646ae5fa0c86753bd9331d4547c0f/rocket-2.2.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.stavro_xhardha.rocket/rocket/2.2.3/593ca185aacd3ff580acec41fd25b4ee3f437535/rocket-2.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
