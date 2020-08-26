@@ -35,16 +35,6 @@ fun writeData(data: String){
 }
 ```
 
-### Support for Flows
-
-```Kotlin
-suspend fun readInt(key: String){
- rocketInstance.readIntAsFlow(key, defaultDesiredValue).collect{
-   //handle here :)
- }
-}
-```
-
 ## Set up
 
 Just call the rocket instance like : 
